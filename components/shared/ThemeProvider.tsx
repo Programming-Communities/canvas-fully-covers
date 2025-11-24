@@ -15,7 +15,7 @@ export function ThemeProvider({
   attribute = "class",
   defaultTheme = "system",
   enableSystem = true,
-  disableTransitionOnChange = true, // Changed to true to prevent flash
+  disableTransitionOnChange = false, // ✅ Change to false for smooth transitions
   ...props 
 }: ThemeProviderProps) {
   return (

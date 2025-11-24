@@ -6,6 +6,7 @@ import PerformanceMonitor from "@/components/PerformanceMonitor";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import { ApolloWrapper } from "@/lib/apollo-wrapper";
+import GlobalCanvas from '@/components/shared/GlobalCanvas';
 
 import { CookieProvider } from "@/contexts/CookieContext";
 import CookieConsent from "@/components/shared/CookieConsent";
@@ -321,6 +322,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
       </head>
 
       <body className={`${inter.className} antialiased`}>
+         {/* ✅ Global Canvas - FIRST ELEMENT IN BODY - PURE WEBSITE BACKGROUND */}
+        <GlobalCanvas />
         {/* ✅ Performance Monitoring - Only in development */}
         {process.env.NODE_ENV === 'development' && <PerformanceMonitor />}
         

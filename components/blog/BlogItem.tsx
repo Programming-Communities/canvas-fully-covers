@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import SocialShareButtons from '../shared/SocialShareButtons';
 import { Post } from '@/types/blog';
-import { CardLoader } from '../shared/CardLoader'; // ✅ ADD THIS IMPORT
+import { CardLoader } from '../shared/CardLoader';
 
 interface BlogItemProps extends Post {
   index?: number;
@@ -30,7 +30,7 @@ const BlogItem: React.FC<BlogItemProps> = ({
   const [showSocialMenu, setShowSocialMenu] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const [isCardLoading, setIsCardLoading] = useState(false); // ✅ ADD CARD LOADING STATE
+  const [isCardLoading, setIsCardLoading] = useState(false);
   
   const socialMenuRef = useRef<HTMLDivElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -69,7 +69,7 @@ const BlogItem: React.FC<BlogItemProps> = ({
   const handleNavigation = useCallback((e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    setIsCardLoading(true); // ✅ SHOW CARD LOADER
+    setIsCardLoading(true);
     
     // Navigate after a small delay to show loader
     setTimeout(() => {
