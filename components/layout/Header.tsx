@@ -183,8 +183,8 @@ const Header: React.FC = () => {
   return (
     <header className={`relative overflow-hidden h-screen ${
       isDark 
-        ? 'bg-gradient-to-br from-gray-900 via-blue-900 to-gray-950' 
-        : 'bg-gradient-to-br from-blue-50 via-white to-gray-100'
+        ? 'bg-linear-to-br from-gray-900 via-blue-900 to-gray-950' 
+        : 'bg-linear-to-br from-blue-50 via-white to-gray-100'
     }`}>
       {/* Canvas */}
       <canvas
@@ -196,7 +196,7 @@ const Header: React.FC = () => {
 
       <div className="relative z-10 h-full flex flex-col">
         {/* Main Header */}
-        <div className="py-8 px-5 md:px-12 lg:px-28 flex-shrink-0">
+        <div className="py-8 px-5 md:px-12 lg:px-28 shrink-0">
           <div className="flex justify-between items-center">
             <Logo />
             <Navigation />
@@ -255,7 +255,7 @@ const Header: React.FC = () => {
         </div>
 
         {/* Categories Navigation Bar */}
-        <div className="flex-shrink-0">
+        <div className="shrink-0">
           <CategoriesNavbar />
         </div>
 
